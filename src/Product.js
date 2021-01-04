@@ -6,6 +6,7 @@ export default function Product({id, title, image, price, rating}) {
         <div className="product">
             
             <div className="product__info">
+                
                 <p>{title}</p>
 
                 <p className="product__price">
@@ -17,16 +18,15 @@ export default function Product({id, title, image, price, rating}) {
                     {Array(rating)
                         .fill()
                         .map((_, i) => (
-                        <p>🌟</p>
+                        <p>⭐</p>
                         ))}
                 </div>
 
-                <img src={image} alt="" />
+                <img className="product__image" src={image} alt="" />
 
-                <button>Add to Basket</button>
+                <button className="product__button">Add to Basket</button> 
 
             </div>
-
         </div>
     )
 }
